@@ -1,0 +1,1 @@
+(function(e){e.fn.loadbar=function(t,n,r){var i=e(this);var s=i.val();var o=i.attr("max");var u=s+t;if(t!=null&&n==null){i.val(t);console.log("Exact called. Set loadbar value to "+t)}if(t!=null&&n=="increment"&&u<=o){i.val(u);console.log("Increment called. Incremented loadbar value by "+t+" to "+u)}if(r!=null){if(r=="slow"){}if(r=="medium"){}if(r=="fast"){}}}})(jQuery)
