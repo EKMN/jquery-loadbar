@@ -9,8 +9,11 @@
   <body>
     <div class="wrapper">
       <div class="loadbar-wrapper">
-        <h3>Loadbar</h3><br>
+        <h3>Loadbar 1</h3><br>
         <progress class="loadbar" value="15" max="100"></progress>
+        <h3>Loadbar 2</h3><br>
+        <progress class="loadbar2" value="15" max="100"></progress>
+        <button>Click me to increment Loadbar2 by 10</button>
       </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -19,6 +22,11 @@
     $(".loadbar").loadbar(35,"increment");
     $(".loadbar").loadbar(15,"increment");
     $(".loadbar").loadbar(55);
+
+    $(".loadbar2").loadbar(0); //the loadbars are independent and work separately.
+    $("button").click(function(){
+        $(".loadbar2").loadbar(10,"increment");
+    });
     </script>
   </body>
 </html>

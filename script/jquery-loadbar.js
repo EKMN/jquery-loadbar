@@ -1,6 +1,6 @@
 /* Copyright (C) 2014 Johannes Ekman - "Jekk" 
  * Author: Github.com/jekk/
- * Mod: Github.com/jekk/jquery-loadbar/
+ * Plugin: Github.com/jekk/jquery-loadbar/
  * License: Github.com/jekk/jquery-loadbar/license.txt/
  * Requires: jQuery
  */
@@ -22,7 +22,7 @@
             console.log("Exact called. Set loadbar value to " + value);
         }
         //case increment
-        if (value != null && filling == "increment" && lbNewVal < lbMaxValue) {
+        if (value != null && filling == "increment" && lbNewVal <= lbMaxValue) {
             /* increments the loadbar value by the inputted amount*/
             loadbar.val(lbNewVal); //sets the value
             console.log("Increment called. Incremented loadbar value by " + value + " to " + lbNewVal);
