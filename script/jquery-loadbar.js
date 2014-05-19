@@ -4,22 +4,28 @@
  * License: Github.com/jekk/jquery-loadbar/license.txt/
  * Requires: jQuery
  */
-
 (function($) {
-    $.fn.loadbar = function(value, speed, filling) {
+    $.fn.loadbar = function(value, filling, speed) {
         // take the value and set the loadbars value to it
         // on the filling you can choose different filling modes: exact or increment (default(no arg) is exact).
         // ie. $(".test").loadbar(15,"slow,"increment"); would increment the current value of the loadbar by 15, not set it to the value of 15.
 
+        //loadbar global variables
         var loadbar = $(this);
         var lbValue = loadbar.val();
-        var lbMaxValue loadbar.attr('max'),
+        var lbMaxValue = loadbar.attr('max');
+        var lbNewVal = lbValue + value;
 
+        //case exact
         if (value != null && filling == null) {
-            lbValue = value; //meaning that loadbar is set to default filling mode: "exact"
+            loadbar.val(value); //sets the value
+            console.log("Exact called. Set loadbar value to " + value);
         }
-        if (value != null && filling == "increment") {
-            lbValue = lbValue += value; /* increments the loadbar value by the inputted amount*/
+        //case increment
+        if (value != null && filling == "increment" && lbNewVal < lbMaxValue) {
+            /* increments the loadbar value by the inputted amount*/
+            loadbar.val(lbNewVal); //sets the value
+            console.log("Increment called. Incremented loadbar value by " + value + " to " + lbNewVal);
         }
         if (speed != null) {
             if (speed == "slow") {
@@ -32,6 +38,6 @@
                 //animate loadbar filling with fast speed
             }
         }
-        //TODO: limit the bar from reaching above the value of the max attribute
+        //TODO: fix the filling speed animation, clean the code and add empty(); and fill();-functions to the plugin
     }
 })(jQuery);
