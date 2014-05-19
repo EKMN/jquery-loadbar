@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jquery-loadbar by jekk</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Jquery-loadbar</h1>
+        <p>A modern jquery accelerated html5 multipurpose loadingbar.</p>
+
+        <p class="view"><a href="https://github.com/jekk/jquery-loadbar">View the Project on GitHub <small>jekk/jquery-loadbar</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/jekk/jquery-loadbar/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jekk/jquery-loadbar/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jekk/jquery-loadbar">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="intro" class="anchor" href="#intro"><span class="octicon octicon-link"></span></a>Intro</h1>
+
+<p>jQuery Loadbar is a tool for manipulating and controlling loadingbars / progressbars (short. "loadbar").
+The plugin itself is very lightweight; the minified (non-gzipped) version weighs merely 0.5kb, which means that the script will hardly affect any load times.</p>
+
+<h1>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h1>
+
+<p>The script has only one function: "loadbar();". The function is fairly simple; you choose whether to increment the
+loadingbar by any amount between 1-100 or to assign an exact value to it. Lastly, you can configure the bar fillrate 
+by defining how fast the flowing color will animate by passing a string ("slow", "medium" or "fast") as an argument to the function</p>
+
+<p>The function syntax is as follows: $(".anyClass, #id or element").loadbar(value, filling, speed);
+Value is an integer while filling and speed are both strings.</p>
+
+<p>Sample usage:</p>
+
+<pre><code>$(".loadbar").loadbar(35,"increment");
+$(".loadbar").loadbar(15,"increment");
+$(".loadbar").loadbar(55);
+$(".loadbar2").loadbar(0); //the loadbars are independent and work separately.
+$("button").click(function(){
+    $(".loadbar2").loadbar(10,"increment");
+});
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/jekk">jekk</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
