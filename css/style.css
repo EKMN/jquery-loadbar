@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+   font-size: 100%;
+   max-width: 100%;
+   line-height: 150%;
+}   
+.wrapper {
+  width: 960px;
+  margin: auto;
+}
+.loadbar-wrapper {
+  margin-top: 50%;
+  text-align: center;
+}
